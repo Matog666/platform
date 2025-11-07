@@ -36,7 +36,7 @@ st.markdown("""
     }
     /* Reduce top padding */
     .block-container {
-        padding-top: 1rem !important;
+        padding-top: 2rem !important;
     }
     /* Style sidebar buttons for tab navigation */
     .stButton > button {
