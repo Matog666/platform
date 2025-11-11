@@ -12,7 +12,7 @@ import io
 # .\venv\Scripts\Activate
 
 # Your API key
-key = "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"
+key = "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"
 
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
 
@@ -362,3 +362,4 @@ if __name__ == "__main__":
     st.set_page_config(layout="wide", page_title="Oil & Tanker Chatbot")
 
     run_oil_chatbot()
+
