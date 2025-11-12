@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-from chatoil import run_oil_chatbot
+# from chatoil import run_oil_chatbot
 
 # .\venv\Scripts\Activate
 
@@ -10,7 +10,7 @@ st.set_page_config(layout="wide", page_title="NextBarrel Terminal")
 
 # Initialize session state for active tab
 if 'active_tab' not in st.session_state:
-    st.session_state.active_tab = "OilGPT"
+    st.session_state.active_tab = "North Sea"
 
 # Custom CSS for Bloomberg-style dark theme
 st.markdown("""
@@ -63,7 +63,7 @@ if not available_stocks:
 st.sidebar.image("logo.png", width=200)
 # st.sidebar.markdown("---")
 
-tab_names = ["OilGPT", "North Sea", "Americas", "Middle East", "WAF", "Refined Products", "Freight", "Charts-News"]
+tab_names = [ "North Sea", "Americas", "Middle East", "WAF", "Refined Products", "Freight", "Charts-News"]
 
 # Navigation buttons in 2-column layout
 col_n1, col_n2 = st.sidebar.columns(2)
@@ -1250,5 +1250,5 @@ if st.session_state.active_tab == "Freight":
         st.metric("High", f"{df_filtered[selected_freight].max():.2f}")
     with col_stat4:
         st.metric("Low", f"{df_filtered[selected_freight].min():.2f}")
-if st.session_state.active_tab == "OilGPT":
-    run_oil_chatbot()
+# if st.session_state.active_tab == "OilGPT":
+#     run_oil_chatbot()
